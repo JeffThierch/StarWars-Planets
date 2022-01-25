@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import AplicationContext from '../context/AplicationContext';
-import useFilter from '../hooks/useFilter';
+import useFilterByName from '../hooks/useFilterByName';
 
 export default function FilterName() {
   const {
@@ -8,7 +8,7 @@ export default function FilterName() {
     setName,
   } = useContext(AplicationContext);
 
-  useFilter();
+  useFilterByName();
 
   return (
     <section>

@@ -5,8 +5,9 @@ import AplicationContext from './AplicationContext';
 export default function AplicationProvider({ children }) {
   const [data, setData] = useState({});
   const [name, setName] = useState('');
-  const [filteredPlanets, setFilteredPlanets] = useState([]);
   const [filterByNumericValues, setFilterByNumericValues] = useState([]);
+  const [planetsByName, setPlanetsByName] = useState([]);
+  const [filteredPlanets, setFilteredPlanets] = useState([]);
 
   const setFilterByNumerericValues = (columnValue, comparisonValue, inputValue) => {
     setFilterByNumericValues(
@@ -22,12 +23,14 @@ export default function AplicationProvider({ children }) {
     filterByNumericValues,
     filterByName: {
       name,
+      planetsByName,
     },
     filteredPlanets,
     saveAPIData: setData,
     setName,
     setFilteredPlanets,
     setFilterByNumerericValues,
+    setPlanetsByName,
   };
   return (
     <AplicationContext.Provider value={ ContextValue }>

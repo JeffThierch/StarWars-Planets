@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import AplicationContext from '../context/AplicationContext';
 import { columnFilterOptions, comparisonFilterOptions } from '../data/data';
 
-export default function FIlters() {
+export default function Filters() {
   const [columnSelectValue, setColumnValue] = useState('population');
   const [comparisonSelectValue, setComparisonValue] = useState('maior que');
   const [inputValue, setInputValue] = useState(0);
