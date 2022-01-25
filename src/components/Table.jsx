@@ -4,7 +4,10 @@ import tableHeadInfos from '../data/data';
 import renderTableData from '../helpers';
 
 export default function Table() {
-  const { data: { results } } = useContext(AplicationContext);
+  const {
+    data: { results },
+    filterByName: { filteredPlanetsByName },
+  } = useContext(AplicationContext);
 
   return (
     <table>
@@ -15,7 +18,7 @@ export default function Table() {
       </thead>
       {results && (
         <tbody>
-          {renderTableData(results)}
+          {renderTableData(filteredPlanetsByName)}
         </tbody>
       )}
     </table>
