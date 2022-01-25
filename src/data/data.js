@@ -1,4 +1,4 @@
-const tableHeadInfos = [
+export const tableHeadInfos = [
   'Name',
   'Rotation Period',
   'Orital Period',
@@ -14,4 +14,16 @@ const tableHeadInfos = [
   'URL',
 ];
 
-export default tableHeadInfos;
+export const columnFilterOptions = [
+  'population',
+  'orbital_period',
+  'diameter',
+  'rotation_period',
+  'surface_water',
+];
+
+export const comparisonFilterOptions = [
+  'maior que',
+  'menor que',
+  'igual a',
+];

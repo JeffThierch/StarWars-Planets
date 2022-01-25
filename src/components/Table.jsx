@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import AplicationContext from '../context/AplicationContext';
-import tableHeadInfos from '../data/data';
+import { tableHeadInfos } from '../data/data';
 import renderTableData from '../helpers';
 
 export default function Table() {
