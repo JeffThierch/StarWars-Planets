@@ -5,7 +5,9 @@ const useFetchData = (callback) => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchStarWars();
-      callback(data);
+      if (!data.error) {
+        callback(data.data);
+      }
     };
     fetchData();
   }, [callback]);

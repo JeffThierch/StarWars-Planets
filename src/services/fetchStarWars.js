@@ -8,7 +8,6 @@ const fetchStarWars = async () => {
     const request = await fetch('https://swapi-trybe.herokuapp.com/api/planets/');
     const response = await request.json();
 
-    console.log(response);
     return {
       ...RETURNED_OBJ,
       data: response,

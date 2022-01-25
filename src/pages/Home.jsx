@@ -4,9 +4,8 @@ import AplicationContext from '../context/AplicationContext';
 import useFetchData from '../hooks/useFetchData';
 
 export default function Home() {
-  const { data, saveAPIData } = useContext(AplicationContext);
+  const { saveAPIData } = useContext(AplicationContext);
   useFetchData(saveAPIData);
-  console.log(data);
   return (
     <main>
       <Table />
