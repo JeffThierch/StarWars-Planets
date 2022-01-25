@@ -7,5 +7,9 @@ export default function Home() {
   const { data, saveAPIData } = useContext(AplicationContext);
   useFetchData(saveAPIData);
   console.log(data);
-  return <Table />;
+  return (
+    <main>
+      <Table />
+    </main>
+  );
 }
