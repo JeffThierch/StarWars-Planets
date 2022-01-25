@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import AplicationContext from '../context/AplicationContext';
 import { columnFilterOptions, comparisonFilterOptions } from '../data/data';
+import useFilterByNumber from '../hooks/useFilterByNumber';
 
 export default function Filters() {
   const [columnSelectValue, setColumnValue] = useState('population');
@@ -11,6 +12,8 @@ export default function Filters() {
     setFilterByNumerericValues,
     filterByNumericValues,
   } = useContext(AplicationContext);
+
+  useFilterByNumber();
 
   return (
     <form>
