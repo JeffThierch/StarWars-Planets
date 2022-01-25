@@ -23,15 +23,18 @@ export default function Filters() {
         value={ columnSelectValue }
         onChange={ ({ target }) => setColumnValue(target.value) }
       >
-        {columnFilterOptions.map((columnValue) => (
-          <option
-            value={ columnValue }
-            key={ columnValue }
-            hidden={ filterByNumericValues.some(({ column }) => column === columnValue) }
-          >
-            {columnValue}
-          </option>
-        ))}
+        {columnFilterOptions.map((columnValue) => {
+          if (filterByNumericValues.some(({ column }) => column === columnValue)) {
+            return false;
+          }
+          return (
+            <option
+              value={ columnValue }
+              key={ columnValue }
+            >
+              {columnValue}
+            </option>);
+        })}
       </select>
 
       <select
