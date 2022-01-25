@@ -5,8 +5,8 @@ import renderTableData from '../helpers';
 
 export default function Table() {
   const {
+    filteredPlanets,
     data: { results },
-    filterByName: { filteredPlanetsByName },
   } = useContext(AplicationContext);
 
   return (
@@ -18,7 +18,7 @@ export default function Table() {
       </thead>
       {results && (
         <tbody>
-          {renderTableData(filteredPlanetsByName)}
+          {renderTableData(filteredPlanets)}
         </tbody>
       )}
     </table>

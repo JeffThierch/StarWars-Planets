@@ -5,25 +5,26 @@ import AplicationContext from './AplicationContext';
 export default function AplicationProvider({ children }) {
   const [data, setData] = useState({});
   const [name, setName] = useState('');
-  const [column, setColumn] = useState('population');
-  const [comparison, setComparison] = useState('igual a');
-  const [value, setValue] = useState(0);
   const [filteredPlanets, setFilteredPlanets] = useState([]);
+  const [filterByNumericValues, setFilterByNumericValues] = useState([]);
 
   const setFilterByNumerericValues = (columnValue, comparisonValue, inputValue) => {
-    setColumn(columnValue);
-    setComparison(comparisonValue);
-    setValue(inputValue);
+    setFilterByNumericValues(
+      [
+        ...filterByNumericValues,
+        { column: columnValue, comparison: comparisonValue, value: inputValue },
+      ],
+    );
   };
 
   const ContextValue = {
     data,
-    saveAPIData: setData,
-    filterByNumericValues: [{ column, comparison, value }],
+    filterByNumericValues,
     filterByName: {
       name,
-      filteredPlanetsByName: filteredPlanets,
     },
+    filteredPlanets,
+    saveAPIData: setData,
     setName,
     setFilteredPlanets,
     setFilterByNumerericValues,

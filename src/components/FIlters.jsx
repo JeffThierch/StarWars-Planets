@@ -9,6 +9,7 @@ export default function FIlters() {
 
   const {
     setFilterByNumerericValues,
+    filterByNumericValues,
   } = useContext(AplicationContext);
 
   return (
@@ -23,6 +24,7 @@ export default function FIlters() {
           <option
             value={ columnValue }
             key={ columnValue }
+            hidden={ filterByNumericValues.some(({ column }) => column === columnValue) }
           >
             {columnValue}
           </option>

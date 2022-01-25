@@ -1,22 +1,15 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import AplicationContext from '../context/AplicationContext';
+import useFilter from '../hooks/useFilter';
 
 export default function FilterName() {
   const {
     filterByName: { name },
     setName,
-    setFilteredPlanets,
-    data: { results },
   } = useContext(AplicationContext);
 
-  useEffect(() => {
-    if (results) {
-      const filteredByName = results.filter(({ name: planetName }) => (
-        planetName.toLowerCase().includes(name.toLowerCase())
-      ));
-      setFilteredPlanets(filteredByName);
-    }
-  }, [name, results, setFilteredPlanets]);
+  useFilter();
+
   return (
     <section>
       <input
