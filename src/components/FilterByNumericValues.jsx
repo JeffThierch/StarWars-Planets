@@ -15,7 +15,7 @@ export default function FilterByNumericValues() {
 
   useFilterByNumber();
   return (
-    <form>
+    <form className="FilterNumeric-Container">
 
       <select
         data-testid="column-filter"
@@ -24,7 +24,7 @@ export default function FilterByNumericValues() {
         onFocus={ ({ target }) => setColumnValue(target.value) }
 
       >
-        {columnFilterOptions.map((columnValue) => {
+        {columnFilterOptions.map(({ columnValue, value }) => {
           if (filterByNumericValues.some(({ column }) => column === columnValue)) {
             return false;
           }
@@ -33,7 +33,7 @@ export default function FilterByNumericValues() {
               value={ columnValue }
               key={ columnValue }
             >
-              {columnValue}
+              {value}
             </option>);
         })}
       </select>
@@ -43,12 +43,12 @@ export default function FilterByNumericValues() {
         value={ comparisonSelectValue }
         onChange={ ({ target }) => setComparisonValue(target.value) }
       >
-        {comparisonFilterOptions.map((comparisonValue) => (
+        {comparisonFilterOptions.map(({ comparisonValue, value }) => (
           <option
             value={ comparisonValue }
             key={ comparisonValue }
           >
-            {comparisonValue}
+            {value}
           </option>
         ))}
       </select>
@@ -68,7 +68,7 @@ export default function FilterByNumericValues() {
           columnSelectValue, comparisonSelectValue, inputValue,
         ) }
       >
-        Filtrar
+        Filter
       </button>
     </form>
   );

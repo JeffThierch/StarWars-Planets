@@ -16,15 +16,15 @@ const renderTableData = (planetsData) => planetsData.map((
     url },
 ) => (
   <tr key={ name }>
-    <td data-testid="planet-name">{name}</td>
+    <td data-testid="planet-name" className="Table-planetname">{name}</td>
     <td>{rotationPeriod}</td>
     <td>{orbitalPeriod}</td>
     <td>{diameter}</td>
-    <td>{climate}</td>
+    <td className="Table-planetclimate">{climate}</td>
     <td>{gravity}</td>
     <td>{terrain}</td>
     <td>{surfaceWater}</td>
-    <td>{population}</td>
+    <td className="Table-planetpopulation">{population}</td>
     <td>{films}</td>
     <td>{created}</td>
     <td>{edited}</td>

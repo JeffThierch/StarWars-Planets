@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import AppliedFilters from '../components/AppliedFilters';
 import FilterName from '../components/FilterName';
 import Filters from '../components/Filters';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Table from '../components/Table';
 import AplicationContext from '../context/AplicationContext';
@@ -17,8 +18,11 @@ export default function Home() {
         <FilterName />
         <Filters />
         <AppliedFilters />
-        <Table />
+        <section className="table-wrapper Flipped">
+          <Table />
+        </section>
       </main>
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,69 @@
+.Filters-filter-container {
+  display: flex;
+  justify-content: space-around;
+  min-height: 20vh;
+  width: 100vw;
+}
+
+.FilterOrder-container {
+  align-items: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.FilterOrder-container select {
+  background-color: white;
+  border-radius: 3px;
+  padding: 0.4rem 0.5rem;
+}
+
+.FilterOrder-container button {
+  background-color: rgb(92, 25, 216);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+
+.FilterNumeric-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.FilterNumeric-Container select {
+  background-color: white;
+  border-radius: 3px;
+  padding: 0.4rem 0.5rem;
+}
+
+.FilterNumeric-Container input {
+  background-color: white;
+  border: 1px solid rgba(133, 131, 131, 0.945);
+  border-radius: 3px;
+  padding: 0.4rem 0.5rem;
+}
+
+.FilterNumeric-Container button {
+  background-color: rgb(92, 25, 216);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.FilterOrder-container button:hover {
+  opacity: 0.9;
+}
+
+
+.FilterNumeric-Container button:hover {
+  opacity: 0.9;
+}
+

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import AplicationContext from '../context/AplicationContext';
 import useFilterByName from '../hooks/useFilterByName';
+import '../styles/FilterName.css';
 
 export default function FilterName() {
   const {
@@ -11,11 +12,11 @@ export default function FilterName() {
   useFilterByName();
 
   return (
-    <section>
+    <section className="FilterName-container">
       <input
         data-testid="name-filter"
         type="text"
-        placeholder="Planet Name"
+        placeholder="Filter by planet name"
         value={ name }
         onChange={ ({ target }) => setName(target.value) }
       />

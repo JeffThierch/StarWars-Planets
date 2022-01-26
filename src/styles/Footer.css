@@ -1,0 +1,29 @@
+footer {
+  align-items: center;
+  background-color: rgba(39, 40, 56, 0.945);
+  color: whitesmoke;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+
+.Footer-linkedin {
+  color: rgb(44, 77, 224);
+}
+
+.linkedinSvg {
+  height: 1.8rem;
+  margin: 0 0.5rem;
+  width: 2rem;
+}
+
+.Footer-github {
+  color: rgb(238, 95, 12);
+}
+
+.Footer-github-svg {
+  height: 1.8rem;
+  width: 2rem;
+}

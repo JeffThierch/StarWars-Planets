@@ -15,15 +15,39 @@ export const tableHeadInfos = [
 ];
 
 export const columnFilterOptions = [
-  'population',
-  'orbital_period',
-  'diameter',
-  'rotation_period',
-  'surface_water',
+  {
+    columnValue: 'population',
+    value: 'Population',
+  },
+  {
+    columnValue: 'orbital_period',
+    value: 'Orital Period',
+  },
+  {
+    columnValue: 'diameter',
+    value: 'Diameter',
+  },
+  {
+    columnValue: 'rotation_period',
+    value: 'Rotation Period',
+  },
+  {
+    columnValue: 'surface_water',
+    value: 'Surface Water',
+  },
 ];
 
 export const comparisonFilterOptions = [
-  'maior que',
-  'menor que',
-  'igual a',
+  {
+    comparisonValue: 'maior que',
+    value: 'Greater than',
+  },
+  {
+    comparisonValue: 'menor que',
+    value: 'Less than',
+  },
+  {
+    comparisonValue: 'igual a',
+    value: 'Equal to',
+  },
 ];

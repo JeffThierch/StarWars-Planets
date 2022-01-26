@@ -7,18 +7,18 @@ export default function OrderColumns() {
   const [orderType, setOrderType] = useState('ASC');
   const { orderItems } = useContext(AplicationContext);
   return (
-    <form>
+    <form className="FilterOrder-container">
       <select
         data-testid="column-sort"
         value={ column }
         onChange={ ({ target }) => setColumn(target.value) }
       >
-        {columnFilterOptions.map((columnValue) => (
+        {columnFilterOptions.map(({ columnValue, value }) => (
           <option
             value={ columnValue }
             key={ columnValue }
           >
-            {columnValue}
+            {value}
           </option>
         ))}
       </select>
@@ -31,7 +31,7 @@ export default function OrderColumns() {
           id="radio-asc"
           onChange={ ({ target }) => setOrderType(target.value) }
         />
-        Asc
+        Ascending
       </label>
       <label htmlFor="radio-desc">
         <input
@@ -42,14 +42,14 @@ export default function OrderColumns() {
           data-testid="column-sort-input-desc"
           onChange={ ({ target }) => setOrderType(target.value) }
         />
-        Desc
+        Descending
       </label>
       <button
         data-testid="column-sort-button"
         type="button"
         onClick={ () => orderItems(column, orderType) }
       >
-        Order
+        Sort
       </button>
     </form>
   );

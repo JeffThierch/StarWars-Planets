@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import AplicationContext from '../context/AplicationContext';
 import { tableHeadInfos } from '../data/data';
 import renderTableData from '../helpers';
+import '../styles/Table.css';
 
 export default function Table() {
   const {
@@ -10,14 +11,14 @@ export default function Table() {
   } = useContext(AplicationContext);
 
   return (
-    <table>
-      <thead>
+    <table className="Table-container">
+      <thead className="Table-thead-container">
         <tr>
           {tableHeadInfos.map((info) => <th key={ info }>{info}</th>)}
         </tr>
       </thead>
       {results && (
-        <tbody>
+        <tbody className="Table-tbody-container">
           {renderTableData(filteredPlanets)}
         </tbody>
       )}
