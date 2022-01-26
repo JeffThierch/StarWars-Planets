@@ -1,5 +1,6 @@
 import { useEffect, useContext } from 'react';
 import AplicationContext from '../context/AplicationContext';
+import { sortArrayInAlphabeticOrder } from '../helpers';
 
 const useFilterByNumber = () => {
   const {
@@ -33,7 +34,8 @@ const useFilterByNumber = () => {
 
       setFilteredPlanets(otherFilters);
     } else {
-      setFilteredPlanets(planetsByName);
+      const sortedPlanets = sortArrayInAlphabeticOrder(planetsByName);
+      setFilteredPlanets(sortedPlanets);
     }
   }, [filterByNumericValues, planetsByName, setFilteredPlanets]);
 };

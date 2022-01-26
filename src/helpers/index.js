@@ -16,7 +16,7 @@ const renderTableData = (planetsData) => planetsData.map((
     url },
 ) => (
   <tr key={ name }>
-    <td>{name}</td>
+    <td data-testid="planet-name">{name}</td>
     <td>{rotationPeriod}</td>
     <td>{orbitalPeriod}</td>
     <td>{diameter}</td>
@@ -31,5 +31,22 @@ const renderTableData = (planetsData) => planetsData.map((
     <td>{url}</td>
   </tr>
 ));
+
+export const sortArrayInAlphabeticOrder = (array) => {
+  const POSITIVE_MOD_SORT_VALUE = 1;
+  const NEGATIVE_MOD_SORT_VALUE = -1;
+  const EQUAL_MOD_SORT_VALUE = 0;
+
+  return array.sort((a, b) => {
+    if (a.name > b.name) {
+      return POSITIVE_MOD_SORT_VALUE;
+    }
+    if (a.name < b.name) {
+      return NEGATIVE_MOD_SORT_VALUE;
+    }
+    // a must be equal to b
+    return EQUAL_MOD_SORT_VALUE;
+  });
+};
 
 export default renderTableData;
