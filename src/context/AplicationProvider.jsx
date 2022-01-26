@@ -18,6 +18,17 @@ export default function AplicationProvider({ children }) {
     );
   };
 
+  const removeFilterByNumericValue = (columnValue) => {
+    const filteredValues = filterByNumericValues
+      .filter(({ column }) => column !== columnValue);
+
+    setFilterByNumericValues(
+      [
+        ...filteredValues,
+      ],
+    );
+  };
+
   const ContextValue = {
     data,
     filterByNumericValues,
@@ -31,6 +42,7 @@ export default function AplicationProvider({ children }) {
     setFilteredPlanets,
     setFilterByNumerericValues,
     setPlanetsByName,
+    removeFilterByNumericValue,
   };
   return (
     <AplicationContext.Provider value={ ContextValue }>

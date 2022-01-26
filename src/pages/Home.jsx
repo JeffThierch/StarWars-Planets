@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import AppliedFilters from '../components/AppliedFilters';
 import FilterName from '../components/FilterName';
 import Filters from '../components/Filters';
 import Header from '../components/Header';
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <FilterName />
         <Filters />
+        <AppliedFilters />
         <Table />
       </main>
     </>
