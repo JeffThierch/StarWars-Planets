@@ -3,6 +3,7 @@
   border-collapse: separate;
   border-spacing: 0 1rem;
   color: rgb(247, 243, 243);
+  min-width: 100vw;
 }
 
 .Table-thead-container {

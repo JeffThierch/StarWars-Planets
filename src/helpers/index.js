@@ -49,4 +49,18 @@ export const sortArrayInAlphabeticOrder = (array) => {
   });
 };
 
+export const returnFilterPlanet = (column, comparison, value, arrayOfPlanets) => (
+  arrayOfPlanets.filter((planet) => {
+    switch (comparison) {
+    case 'maior que':
+      return Number(planet[column]) > Number(value);
+    case 'menor que':
+      return Number(planet[column]) < Number(value);
+    case 'igual a':
+      return Number(planet[column]) === Number(value);
+    default:
+      return planet;
+    }
+  }));
+
 export default renderTableData;

@@ -51,3 +51,17 @@ export const comparisonFilterOptions = [
     value: 'Equal to',
   },
 ];
+
+export const filtersComparison = {
+  'maior que': 'Greater than',
+  'menor que': 'Less than',
+  'igual a': 'Equal to',
+};
+
+export const filterColumn = {
+  population: 'Population',
+  orbital_period: 'Orital Period',
+  diameter: 'Diameter',
+  rotation_period: 'Rotation Period',
+  surface_water: 'Surface Water',
+};

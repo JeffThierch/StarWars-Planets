@@ -11,6 +11,11 @@ footer {
 
 .Footer-linkedin {
   color: rgb(44, 77, 224);
+  transition: all 0.3s ease;
+}
+
+.Footer-linkedin:hover {
+  opacity: 0.8;
 }
 
 .linkedinSvg {
@@ -21,6 +26,11 @@ footer {
 
 .Footer-github {
   color: rgb(238, 95, 12);
+  transition: all 0.3s ease;
+}
+
+.Footer-github:hover {
+  opacity: 0.8;
 }
 
 .Footer-github-svg {

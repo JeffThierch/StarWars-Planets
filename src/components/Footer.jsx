@@ -9,7 +9,7 @@ export default function Footer() {
       <a
         href="https://www.linkedin.com/in/jeffthierch/"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className="Footer-linkedin"
       >
         <FaLinkedin className="linkedinSvg" />
@@ -17,7 +17,7 @@ export default function Footer() {
       <a
         href="https://github.com/JeffThierch"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className="Footer-github"
       >
         <FaGithub className="Footer-github-svg" />

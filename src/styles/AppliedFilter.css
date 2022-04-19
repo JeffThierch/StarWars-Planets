@@ -1,0 +1,38 @@
+.Filters-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 100vw;
+}
+
+.filter-applied {
+  align-items: center;
+  background: rgb(56, 53, 58);
+  border: 1px solid rgb(143, 142, 142);
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgb(92, 25, 216);
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 0 0.4rem;
+  padding: 0.3rem;
+}
+
+.remove-filter-btn {
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  padding: 10px;
+}
+
+.remove-filter-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.filters-trash-svg {
+  color: rgb(224, 24, 24);
+  height: 1rem;
+  width: 0.8rem;
+}
